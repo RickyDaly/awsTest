@@ -1,16 +1,20 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cors = require('cors');
 // const db = require('./db');
 // const AdvertController = require('./Adverts/AdvertController');
 // const UserController = require('./Users/UserController');
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+//   });
 
+
+// Enable CORS for all routes
+app.use(cors());
 
 
 app.use(bodyParser.urlencoded({extended: false}));
