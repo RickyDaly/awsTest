@@ -33,17 +33,23 @@ routes.post('/', function(req, res){
     //     res.status(500).json(err);
     // })
 
+    data = {title: "Rickys test"}
 
-    Advert.create({
-        title: "Hello World"
+    Advert.create(data)
+    .then(advert => {
+        console.log(advert)
     })
-    .then(adverts => {
-        res.status(200).json(adverts);
-        console.log(adverts);
-    }).catch(err =>{
-        res.status(500).json(err);
-        console.log(err);
-    })
+
+    // Advert.create({
+    //     title: "Hello World"
+    // })
+    // .then(adverts => {
+    //     res.status(200).json(adverts);
+    //     console.log(adverts);
+    // }).catch(err =>{
+    //     res.status(500).json(err);
+    //     console.log(err);
+    // })
 })
 
 
