@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 // app.use(express.static('uploads'));
 
-app.use('/adverts', AdvertController);
+app.use('/api/adverts', AdvertController);
 // app.use('/users', UserController);
 
 // routes.get('/', function(req, res){
