@@ -35,7 +35,7 @@ routes.post('/', function(req, res){
 
 
     Advert.create({
-        title: req.body.title
+        title: "Hello World"
     })
     .then(adverts => {
         res.status(200).json(adverts);
