@@ -25,15 +25,16 @@ routes.post('/', function(req, res){
     // var imageUrl = req.file.path.slice(8, req.file.path.length);
     // var imageUrl = req.file.path;
     Advert.create({
-        title: req.body.title,
-    }, function(err, postedAdvert){
-        if(err){
-            res.status(500).json(err);
-        } else {
-            res.status(201).json(postedAdvert);
-        }
+        title: req.body.title
+    }.then(advert =>{
+        res.status(200).json(advert);
     })
+    .catch(err =>{
+        res.status(500).json(err);
+    }))
 })
+
+
 
 
 module.exports = routes;
