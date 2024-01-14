@@ -39,8 +39,10 @@ routes.post('/', function(req, res){
     })
     .then(adverts => {
         res.status(200).json(adverts);
+        console.log(adverts);
     }).catch(err =>{
         res.status(500).json(err);
+        console.log(err);
     })
 })
 
