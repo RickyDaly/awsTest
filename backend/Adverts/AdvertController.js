@@ -39,6 +39,7 @@ routes.post('/', function(req, res){
     .then(advert => {
         console.log(advert)
     })
+    .save()
 
     // Advert.create({
     //     title: "Hello World"
