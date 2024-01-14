@@ -1,12 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 const Advert = require('./Advert');
-// const multer = require('multer');
-// const jwt_decode = require('jwt-decode');
-// const mongoose = require('mongoose');
-// const { Router } = require('express');
-// const { db, count } = require('./Advert');
-// const e = require('express');
+
 
 routes.get('/', function(req, res){
     Advert.find()

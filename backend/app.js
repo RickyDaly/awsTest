@@ -46,7 +46,7 @@ app.use(bodyParser.json());
 //     res.status(200).send('Parameters logged successfully!');
 //   });
 
-app.use('api/adverts', AdvertController);
+app.use('/api/adverts', AdvertController);
 
 // routes.post('/', function(req, res){
     // const decodedToken = jwt_decode(req.body.token);
