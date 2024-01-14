@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
-// const db = require('./db');
-// const AdvertController = require('./Adverts/AdvertController');
+const db = require('./db');
+const AdvertController = require('./Adverts/AdvertController');
 // const UserController = require('./Users/UserController');
 
 // app.use(function(req, res, next) {
@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 
 
 // Endpoint to handle POST requests
-app.post('/adverts', (req, res) => {
+app.post('/api/adverts', (req, res) => {
     // Log the parameters received in the request body
     console.log('Parameters:', req.body);
   

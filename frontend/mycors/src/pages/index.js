@@ -26,7 +26,7 @@ export default function Home() {
 
     console.log(data);
 
-    axios.post("http://localhost:3001/adverts", data).then(res => {
+    axios.post("api/adverts", data).then(res => {
         // console.log(res.data);
         // localStorage.setItem('token', res.data.token);
         router.push('/');
@@ -36,17 +36,17 @@ export default function Home() {
 }
   // const [getUserFavourites, setUserFavourites] = useState([]);
 
-  useEffect(()=>{
-      // axios.get("http://localhost:3000/adverts")
-      axios.get("http://localhost/:3001/adverts")
-      .then(response => {
-          setAdverts(response.data);
-          // getUserDetails();
+  // useEffect(()=>{
+  //     // axios.get("http://localhost:3000/adverts")
+  //     axios.get("http:///:3001/adverts")
+  //     .then(response => {
+  //         setAdverts(response.data);
+  //         // getUserDetails();
           
-      }).catch(err => {
-          // console.log(err);
-      })
-  }, [])
+  //     }).catch(err => {
+  //         // console.log(err);
+  //     })
+  // }, [])
 
   
 
