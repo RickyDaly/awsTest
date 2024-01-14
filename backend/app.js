@@ -37,14 +37,16 @@ app.use(bodyParser.json());
 // })
 
 
-// Endpoint to handle POST requests
-app.post('/api/adverts', (req, res) => {
-    // Log the parameters received in the request body
-    console.log('Parameters:', req.body);
+// // Endpoint to handle POST requests
+// app.post('/api/adverts', (req, res) => {
+//     // Log the parameters received in the request body
+//     console.log('Parameters:', req.body);
   
-    // Send a response
-    res.status(200).send('Parameters logged successfully!');
-  });
+//     // Send a response
+//     res.status(200).send('Parameters logged successfully!');
+//   });
+
+app.use('api/adverts', AdvertController);
 
 // routes.post('/', function(req, res){
     // const decodedToken = jwt_decode(req.body.token);
