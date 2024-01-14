@@ -35,11 +35,11 @@ routes.post('/', function(req, res){
 
     data = {title: "Rickys test"}
 
-    Advert.create(data)
+    Advert.insertOne(data)
     .then(advert => {
         console.log(advert)
     })
-    .save()
+    
 
     // Advert.create({
     //     title: "Hello World"
