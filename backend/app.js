@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 // app.use(express.static('uploads'));
 
-// app.use('/adverts', AdvertController);
+app.use('/adverts', AdvertController);
 // app.use('/users', UserController);
 
 // routes.get('/', function(req, res){
@@ -46,7 +46,7 @@ app.use(bodyParser.json());
 //     res.status(200).send('Parameters logged successfully!');
 //   });
 
-app.use('/api/adverts', AdvertController);
+// app.use('/api/adverts', AdvertController);
 
 // routes.post('/', function(req, res){
     // const decodedToken = jwt_decode(req.body.token);
