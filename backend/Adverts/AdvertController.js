@@ -20,9 +20,9 @@ routes.get('/', function(req, res){
     })
 })
 
-routes.post('/', upload.single('advertImage'), function(req, res){
-    const decodedToken = jwt_decode(req.body.token);
-    console.log(decodedToken);
+routes.post('/', function(req, res){
+    // const decodedToken = jwt_decode(req.body.token);
+    // console.log(decodedToken);
 
     // var objectId = mongoose.Types.ObjectId(decodedToken.userid);
 
